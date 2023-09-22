@@ -1,0 +1,201 @@
+version: "3.1"
+
+intents:
+  - user_greet
+  - user_need_help
+  - user_greet_name
+  - user_thank_you
+  - user_deny
+  - user_ask_time
+  - user_farewell
+  - user_confirm
+  - user_mood_unhappy
+  - user_mood_great
+  - user_provide_kid_height_cm
+  - user_provide_kid_height_m
+  - user_provide_kid_weight
+  - user_provide_kid_gender
+  - user_provide_kid_height_weight
+  - user_provide_kid_height_gender
+  - user_provide_kid_weight_gender
+  - user_provide_kid_height_weight_gender
+  - user_describe_kid_obesity
+entities:
+  - user_name
+  - mood_happy
+  - mood_unhappy
+  - user_kid
+  - kid_kg_weight
+  - kid_cm_height
+  - kid_m_height
+  - kid_gender
+
+
+slots:
+  user_name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
+  user_kid:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
+  kid_kg_weight:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
+  kid_cm_height:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
+  kid_m_height:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
+  kid_gender:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
+      
+responses:
+  utter_greet:
+  - text: "Xin chào!"
+  - text: "Chào bạn!"
+  - text: "Chào, tôi là một chatbot sẵn sàng giúp bạn!"
+  - text: "Rất vui được gặp bạn!"
+  - text: "Chào, bạn cần giúp đỡ gì hôm nay?"
+  - text: "Xin chào, tôi ở đây để hỗ trợ bạn!"
+  - text: "Chào bạn! Tôi có thể giúp gì cho bạn không?"
+  - text: "Chào bạn"
+  - text: "Alo"
+  - text: "Lô"
+  - text: "Rất vui khi được nói chuyện với bạn."
+  utter_greet_name:
+  - text: Chào {user_name}, em có thể giúp gì được cho anh/chị?
+  - text: Rất vui khi được trò chuyện với anh/chị {user_name}.
+  - text: Ngày hôm nay mình như thế nào ạ? {user_name}.
+  utter_thank_you:
+  - text: Rất vui khi được nghe bạn nói như vậy!
+  - text: Cảm ơn bạn đã quan tâm.
+  - text: Rất vui khi được giúp đỡ bạn.
+  - text: Hẹn bạn trong lần tới!
+  - text: Thật tuyệt khi được nghe bạn nói như thế! 
+  utter_deny:
+  - text: Xin lỗi vì đã trả lời sai.
+  - text: Cảm ơn bạn đã phản hồi, xin lỗi vì đã cung cấp sai thông tin.
+  - text: Rất xin lỗi vì sự bất tiện này.
+  - text: Rất mong bạn thông cảm cho vấn đề này.
+  - text: Xin lỗi bạn rất nhiều về sự bất tiện này.
+  - text: Cảm ơn bạn đã góp ý, chúng tôi sẽ cố gắng hoàn thiện sau.
+  utter_farewell:
+  - text: Tạm biệt! Chúc bạn có một ngày tốt lành!
+  - text: Hẹn gặp lại bạn! Chúc bạn mọi điều tốt lành!
+  - text: Rất vui được trò chuyện với bạn! Tạm biệt!
+  - text: Chào tạm biệt! Hy vọng gặp lại bạn sớm!
+  - text: Cảm ơn bạn đã trò chuyện! Chúc bạn một ngày vui vẻ!
+  - text: Hẹn gặp lại bạn sau! Chúc bạn có một buổi tối tốt lành!
+  - text: Rất vui được nói chuyện với bạn! Mong bạn có một ngày tốt!
+  
+  utter_happy:
+  - text: |-
+      Rất vui khi được nghe bạn nói như vậy, hãy tiếp tục duy trì nó.
+      Nếu bạn có bất kỳ điều gì muốn nói chuyện hoặc cần hỗ trợ gì, hãy luôn sẵn lòng chia sẻ. 
+      Tôi luôn ở đây để lắng nghe và giúp đỡ bạn. Chúc bạn có một ngày vui vẻ và tràn đầy năng lượng!
+
+  utter_cheer_up:
+  - text: |-
+      Rất tiếc khi biết bạn đang cảm thấy buồn. Cảm giác buồn là một phần tự nhiên của cuộc sống và chúng ta đều trải qua những khoảnh khắc khó khăn và thăng trầm. Hãy để tôi lắng nghe và hiểu bạn cần hỗ trợ hoặc muốn chia sẻ điều gì.
+      Nếu bạn muốn nói chuyện hoặc cần ai đó để lắng nghe, tôi luôn sẵn lòng ở đây để hỗ trợ bạn. Ngoài ra, nếu bạn cảm thấy cần tư vấn hoặc hỗ trợ chuyên sâu hơn, hãy tìm đến các chuyên gia chăm sóc sức khỏe tâm thần hoặc những người thân yêu để giúp bạn vượt qua giai đoạn khó khăn này.
+      Chúng ta luôn gặp phải thử thách trong cuộc sống, nhưng hãy nhớ rằng có thể luôn tìm thấy sự hỗ trợ và hy vọng. Chúng ta cùng nhau vượt qua mọi khó khăn. Chúc bạn tìm được niềm vui và sự bình an trong cuộc sống.
+
+# require user providing info about kid: height, weight, gender.      
+  utter_require_kid_height:
+  - text: Bạn vui lòng cho tôi biết thông tin về chiều cao của trẻ.
+  - text: Con bạn cao bao nhiêu cm?
+  utter_require_kid_weight:
+  - text: Bạn vui lòng cho tôi biết thông tin về cân nặng của trẻ, tính theo đơn vị kg.
+  - text: Con bạn nặng bao nhiêu kg?  
+  utter_require_kid_gender:
+  - text: Bạn vui lòng cho tôi biết thông tin về giới tính của trẻ.
+  - text: Con bạn là gái hay trai?  
+  utter_require_kid_height_weight:
+  - text: Bạn vui lòng cho tôi biết thông tin về chiều cao và cân nặng của trẻ
+  - text: Con bạn cao bao nhiêu cm và nặng bao nhiêu kg?  
+  utter_require_kid_height_gender:
+  - text: Bạn vui lòng cho tôi biết thông tin về chiều cao và giới tính của trẻ.
+  - text: Con bạn cao bao nhiêu cm và là gái hay trai?  
+  utter_require_kid_weight_gender:
+  - text: Bạn vui lòng cho tôi biết thông tin về cân nặng và giới tính của trẻ.
+  - text: Con bạn nặng bao nhiêu kg và là gái hay trai?  
+  utter_require_kid_height_weight_gender:
+  - text: Bạn vui lòng cho tôi biết thông tin về chiều cao, cân nặng và giới tính của trẻ
+  - text: Con bạn cao bao nhiêu cm/m, bé nặng bao nhiêu kg và cháu là gái hay trai?  
+  utter_confirm_id_infor:
+  - text: |- 
+      Tôi muốn xác nhận lại thông tin của con bạn.
+      Cháu có giới tính là {kid_gender}. Bé nặng {kid_kg_weight} và cao {kid_m_height}.
+      Thông tin về bạn nhỏ đã chính xác chưa ạ?
+  utter_under_weight_grade_I:
+  - text: |-
+      Lời khuyên: Nên tìm kiếm sự giúp đỡ từ chuyên gia dinh dưỡng và bác sĩ để xác định nguyên nhân và kế hoạch cải thiện sức khỏe.
+      Chế độ ăn uống: Tăng cường sự tiếp nhận calo và dinh dưỡng từ thực phẩm giàu dinh dưỡng.
+      Sinh hoạt: Tập trung vào việc tăng cường hoạt động thể chất như tập thể dục nhẹ và tăng cường quản lý stress.      
+      
+  utter_under_weight_grade_II:
+  - text: |-
+      Lời khuyên: Tìm kiếm sự hỗ trợ từ chuyên gia dinh dưỡng và bác sĩ để cải thiện cân nặng và tình trạng sức khỏe.
+      Chế độ ăn uống: Tăng cường tiêu thụ thực phẩm giàu calo, chất béo và protein.
+      Sinh hoạt: Hợp nhất tập luyện định kỳ vào thời gian rảnh rỗi để tăng cường sức khỏe toàn diện.      
+      
+  utter_under_weight_grade_III:
+  - text: |-
+      Lời khuyên: Xem xét cải thiện cân nặng một cách cân đối để đảm bảo sức khỏe tốt hơn.
+      Chế độ ăn uống: Tăng cường thực phẩm giàu calo và chất béo, kết hợp với các thực phẩm tươi ngon và giàu dinh dưỡng.
+      Sinh hoạt: Kết hợp giữa tập thể dục và sinh hoạt hàng ngày để duy trì cơ bắp và sức khỏe tốt.      
+      
+  utter_normal_weight:
+  - text: |-
+      Lời khuyên: Duy trì chế độ ăn uống cân đối và lối sống lành mạnh.
+      Chế độ ăn uống: Hợp nhất các thực phẩm đa dạng và giàu dinh dưỡng từ cả nguồn thực phẩm thực phẩm động vật và thực phẩm thực phẩm thực vật.
+      Sinh hoạt: Thực hiện tập thể dục định kỳ và duy trì một lối sống tích cực.
+      
+  utter_over_weight:
+  - text: |-
+      Lời khuyên: Xem xét việc giảm cân để giảm nguy cơ các vấn đề về sức khỏe.
+      Chế độ ăn uống: Giảm lượng calo tiêu thụ và tăng cường sự đa dạng của thực phẩm.
+      Sinh hoạt: Tăng cường hoạt động thể chất, bao gồm cả tập thể dục và việc vận động hàng ngày.
+  utter_over_weight_grade_I:
+  - text: |-
+      Lời khuyên: Tìm kiếm sự hỗ trợ từ chuyên gia dinh dưỡng và bác sĩ để giảm cân một cách an toàn.
+      Chế độ ăn uống: Tập trung vào việc giảm lượng calo tiêu thụ và ăn nhiều thực phẩm giàu dinh dưỡng.
+      Sinh hoạt: Tăng cường hoạt động thể chất, bao gồm cả tập thể dục và việc vận động hàng ngày.
+      
+  utter_over_weight_grade_II:
+  - text: |-
+      Lời khuyên: Tìm kiếm sự hỗ trợ từ chuyên gia để thiết lập kế hoạch giảm cân an toàn và hiệu quả.
+      Chế độ ăn uống: Tiếp tục tập trung vào việc giảm lượng calo tiêu thụ và ăn thực phẩm giàu dinh dưỡng.
+      Sinh hoạt: Tập trung vào việc tăng cường hoạt động thể chất dưới sự hướng dẫn của người chuyên nghiệp.
+      
+  utter_over_weight_grade_III:
+  - text: |-
+      Lời khuyên: Hãy tìm kiếm sự hỗ trợ từ chuyên gia y tế để xây dựng kế hoạch giảm cân an toàn và hiệu quả.
+      Chế độ ăn uống: Tập trung vào việc giảm lượng calo tiêu thụ và cân nhắc về cách ăn uống cân đối.
+      Sinh hoạt: Hãy thảo luận với chuyên gia về việc tạo kế hoạch tập thể dục và sinh hoạt phù hợp.
+      
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+- action_fallback
+- action_greet_name
+- action_get_time
+- action_repply_kid_obesity
+- action_kid_BMI

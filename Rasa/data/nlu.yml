@@ -1,0 +1,441 @@
+version: "3.1"
+
+nlu:
+- intent: user_greet
+  examples: |
+    - xin chào
+    - chào bạn
+    - tôi cần sự giúp đỡ 
+    - bạn có đang rảnh không?
+    - Hi
+    - Hey
+    - Lô 
+    - xinn chaffo
+    - Chào, bạn cảm thấy như thế nào?
+    - Có ai ở đây không?
+
+- intent: user_need_help
+  examples: |
+    - Tôi cần sự giúp đỡ.
+    - Tôi cần bạn hỗ trợ vấn đề này.
+    - Bạn có thể giúp đỡ tôi không?
+    - Tôi muốn bạn giúp đỡ tôi.
+    - Bạn giúp tôi việc này được không? 
+    - Cậu có thể giúp tôi việc này không?
+    - Bạn có thể giúp tôi việc sau đây không?
+
+- intent: user_greet_name
+  examples: |
+    - Chào bạn, tôi là [Tuấn Anh](user_name)
+    - Tôi là [Trang](user_name) và tôi cần giúp đỡ
+    - Tôi là [Hội](user_name)
+    - Tôi là [Minh Anh](user_name)
+    - Tôi là [Hải](user_name)
+    - Tôi tên là [Hội](user_name)
+    - Tôi tên là [Trang](user_name)
+    - Tôi tên là [Huyền](user_name)
+    - Tôi tên là [Kiều](user_name)
+    - Tao tên là [Hội](user_name)
+    - Tao tên là [Trang](user_name)
+    - Tao tên là [Huyền](user_name)
+    - Tao tên là [Kiều](user_name)
+    - T tên là [Hội](user_name)
+    - T tên là [Trang](user_name)
+    - T tên là [Huyền](user_name)
+    - T tên là [Kiều](user_name)
+    - Bố mày tên là [Hội](user_name)
+    - Bố mày tên là [Trang](user_name)
+    - Bố mày tên là [Huyền](user_name)
+    - Bố mày tên là [Kiều](user_name)
+    - Tôi xin tự giới thiệu, tôi tên là [Hội](user_name)
+    - Tôi xin tự giới thiệu, tôi tên là [Trang](user_name)
+    - Tôi xin tự giới thiệu, tôi tên là [Huyền](user_name)
+    - Tôi xin tự giới thiệu, tôi tên là [Kiều](user_name)
+    - Mình xin tự giới thiệu, mình tên là [Hội](user_name)
+    - Mình xin tự giới thiệu, mình tên là [Trang](user_name)
+    - Mình xin tự giới thiệu, mình tên là [Huyền](user_name)
+    - Mình xin tự giới thiệu, mình tên là [Kiều](user_name)
+    - Xin tự giới thiêu, tôi là [Hội](user_name)
+    - Xin tự giới thiêu, tôi là [Trang](user_name)
+    - Xin tự giới thiêu, tôi là [Huyền](user_name)
+    - Xin tự giới thiêu, tôi là [Kiều](user_name)
+    - Xin trịnh trọng giới thiệu, tôi tên là [Hội](user_name)
+    - Xin trịnh trọng giới thiệu, tôi tên là [Trang](user_name)
+    - Xin trịnh trọng giới thiệu, tôi tên là [Huyền](user_name)
+    - Xin trịnh trọng giới thiệu, tôi tên là [Kiều](user_name)
+
+- intent: user_thank_you
+  examples: |
+    - Cảm ơn.
+    - Ok.
+    - Okay đấy.
+    - Được đấy.
+    - Gợi ý tốt.
+    - Tốt lắm.
+    - Hay đấy.
+    - Khá quá nhờ!
+    - OK đấy
+    - Good.
+    - Preety good.
+    - Bạn thông minh đấy.
+
+- intent: user_deny
+  examples: |
+    - từ chối
+    - không đồng ý
+    - không
+    - không phải
+    - chẳng thèm
+    - không muốn
+    - không quan tâm
+    - không đúng.
+    - không tin
+    - không thể
+    - không có ý định
+    - không thực hiện
+    - không tán thành
+    - không chấp nhận
+    - đéo
+    - không đúng như vậy.
+    - không phải như thế
+    - Nó không phải như vậy.
+    - Nó vẫn chưa giúp được cho tôi
+    - Nó không đúng 
+
+- intent: user_farewell
+  examples: |
+    - Bye
+    - Sea
+    - Tạm biệt
+    - Chào tạm biệt
+    - Hẹn gặp lại
+    - Tôi sẽ đi
+    - Rất vui được trò chuyện với bạn
+    - Chúc bạn một ngày tốt lành
+    - Chúc bạn có một ngày tốt
+    - Chúc bạn có một buổi tối tốt lành
+    - Hẹn gặp lại bạn sau
+    - Chúc bạn cuối tuần vui vẻ
+    - Mong bạn có một ngày tốt
+    - Chào bạn, hẹn gặp lại lần sau
+    - Rất vui được trò chuyện, chúc bạn một ngày tốt lành
+    - Chúc bạn có một buổi tối tốt, tạm biệt
+    - Tạm biệt, hy vọng gặp lại bạn sớm
+    - Chào tạm biệt, mong bạn có một ngày vui vẻ
+    - Hẹn gặp lại bạn sau, chúc bạn có một ngày tốt lành
+    - Chúc bạn cuối tuần vui vẻ, tạm biệt
+    - Mong bạn có một ngày tốt, chào tạm biệt
+    - Hẹn gặp lại bạn sau, chúc bạn có một buổi tối tốt lành
+
+
+- intent: user_confirm
+  examples: |
+    - Đúng.
+    - Đúng vậy.
+    - Đúng là như thế.
+    - Chuẩn là như vậy.
+    - Chuẩn rồi.
+    - Ý của tôi là vậy
+    - Yes.
+    - Đúng thế.
+    - Đúng là như vậy.
+    - Chuẩn rồi đấy.
+    - Chính xác
+    - Chuẩn.
+    - Yes
+    - Ok. 
+    - Chính là nó.
+
+- intent: user_mood_unhappy
+  examples: |
+    - Ngày hôm nay của tôi rất tệ
+    - Tuần này của tôi rất buồn
+    - Tôi cảm thấy chán
+    - Tôi cảm thấy không được tốt
+    - Siêu buồn
+    - Không vui
+    - Không ổn
+    - Cực kì buồn
+    - Quá buồn
+    - Quá không ổn
+    - Tôi cảm thấy thất vọng
+
+- intent: user_mood_great
+  examples: |
+    - Tôi cảm thấy tuyệt
+    - Tôi cảm thấy rất tuyệt
+    - Tôi cảm thấy tốt
+    - Tôi cảm thấy vui
+    - Tôi thấy vui vẻ
+    - Tôi thấy rất ấn tượng
+    - Tôi thấy cực kì vui
+    - Tôi thấy siêu vui
+    - Tôi cảm thấy rất thú vị
+    - cảm thấy rất thú vị
+    - thấy siêu vui
+    - thấy rất ấn tượng
+    - cảm thấy vui
+    - cảm thấy tốt
+    - cảm thấy rất tuyệt
+    - cảm thấy tốt
+
+- intent: user_ask_time 
+  examples: |
+    - Bây giờ là mấy giờ?
+    - Mấy giờ rồi?
+    - Hiện tại là mấy giờ?
+    - Giờ?
+    - Thời gian bây giờ?
+    - Thời gian hiện tại.
+
+- intent: user_provide_kid_height_cm
+  examples: |
+    - Chiều cao của con tôi là [130cm](kid_cm_height).
+    - Con mình cao [140cm](kid_cm_height).
+    - Con tôi có chiều cao [120cm](kid_cm_height).
+    - Chiều cao của con là [125cm](kid_cm_height).
+    - Chiều cao của con tôi là [110cm](kid_cm_height).
+    - Con mình cao [110cm](kid_cm_height).
+    - Con tôi có chiều cao [110cm](kid_cm_height).
+    - Chiều cao của con là [115cm](kid_cm_height).
+
+- intent: user_provide_kid_height_m
+  examples: |
+    - Con của tôi cao [1m5].
+    - Con của tôi cao [1.5m].
+    - Con của tôi cao [1m54].
+    - Con của tôi cao [1.55m].
+    - Chiều cao của con tôi là [1.3m](kid_m_height).
+    - Con mình cao [1.4m](kid_m_height).
+    - Con tôi có chiều cao [1.2m](kid_m_height).
+    - Chiều cao của con là [1.25m](kid_m_height).
+    - Chiều cao của con tôi là [1,3m](kid_m_height).
+    - Con mình cao [1,4m](kid_m_height).
+    - Con tôi có chiều cao [1,2m](kid_m_height).
+    - Chiều cao của con là [1,25m](kid_m_height).
+    - Chiều cao của con tôi là [1m3](kid_m_height).
+    - Con mình cao [1m4](kid_m_height).
+    - Con tôi có chiều cao [1m2](kid_m_height).
+    - Chiều cao của con là [1m25](kid_m_height).
+    - Chiều cao của con tôi là [1m30](kid_m_height).
+    - Con mình cao [1m40](kid_m_height).
+    - Con tôi có chiều cao [1m20](kid_m_height).
+    - Chiều cao của con tôi là [1m3](kid_m_height).
+    - Con mình cao [1m4](kid_m_height).
+    - Con tôi có chiều cao [1m2](kid_m_height).
+
+- intent: user_provide_kid_weight
+  examples: |
+    - Cân nặng của con tôi là [25 kg](kid_kg_weight).
+    - Con mình nặng [30 kg](kid_kg_weight).
+    - Con tôi có cân nặng [20 kg](kid_kg_weight).
+    - Cân nặng của con là [22 kg](kid_kg_weight).
+    - Con tôi cân nặng [28 kg](kid_kg_weight) sau khi đo.
+    - Cân nặng của con là [32 kg](kid_kg_weight) theo số liệu mới nhất.
+    - Con mình đo cân nặng và thu được [26 kg](kid_kg_weight).
+    - Tôi biết con mình nặng [29 kg](kid_kg_weight).
+    - Cân nặng của con tôi là [25.5 kg](kid_kg_weight).
+    - Con mình nặng [30.5 kg](kid_kg_weight).
+    - Con tôi có cân nặng [20.5 kg](kid_kg_weight).
+    - Cân nặng của con là [22.5 kg](kid_kg_weight).
+    - Con tôi cân nặng [28.5 kg](kid_kg_weight) sau khi đo.
+    - Cân nặng của con là [32.5 kg](kid_kg_weight) theo số liệu mới nhất.
+    - Con mình đo cân nặng và thu được [26.5 kg](kid_kg_weight).
+    - Tôi biết con mình nặng [29.5 kg](kid_kg_weight).
+    - Cân nặng của con tôi là [25.8 kg](kid_kg_weight).
+    - Con mình nặng [30.8 kg](kid_kg_weight).
+    - Con tôi có cân nặng [20.8 kg](kid_kg_weight).
+    - Cân nặng của con là [22.8 kg](kid_kg_weight).
+    - Con tôi cân nặng [28.8 kg](kid_kg_weight) sau khi đo.
+    - Cân nặng của con là [32.8 kg](kid_kg_weight) theo số liệu mới nhất.
+    - Con mình đo cân nặng và thu được [26.8 kg](kid_kg_weight).
+    - Tôi biết con mình nặng [29.8 kg](kid_kg_weight).
+    - Cân nặng của con tôi là [25.3kg](kid_kg_weight).
+    - Con mình nặng [30.3kg](kid_kg_weight).
+    - Con tôi có cân nặng [20.3kg](kid_kg_weight).
+    - Cân nặng của con là [22.3kg](kid_kg_weight).
+    - Con tôi cân nặng [28.3kg](kid_kg_weight) sau khi đo.
+    - Cân nặng của con là [32.3kg](kid_kg_weight) theo số liệu mới nhất.
+    - Con mình đo cân nặng và thu được [26.3kg](kid_kg_weight).
+    - Tôi biết con mình nặng [29.3kg](kid_kg_weight).
+    - Con tôi cân nặng [18.8kg](kid_kg_weight) sau khi đo.
+    - Cân nặng của con là [12.8kg](kid_kg_weight) theo số liệu mới nhất.
+    - Con mình đo cân nặng và thu được [16.8kg](kid_kg_weight).
+    - Tôi biết con mình nặng [19.8kg](kid_kg_weight).
+    - Cân nặng của con tôi là [15.3kg](kid_kg_weight).
+    - Con mình nặng [10.3kg](kid_kg_weight).
+    - Con tôi có cân nặng [10.3kg](kid_kg_weight).
+    - Cân nặng của con là [12.3kg](kid_kg_weight).
+    - Con tôi cân nặng [18.3kg](kid_kg_weight) sau khi đo.
+    - Cân nặng của con là [12.3kg](kid_kg_weight) theo số liệu mới nhất.
+    - Con mình đo cân nặng và thu được [16.3kg](kid_kg_weight).
+    - Tôi biết con mình nặng [19.3kg](kid_kg_weight).
+
+- intent: user_provide_kid_gender
+  examples: |
+    - Giới tính của con tôi là nam.
+    - Con mình là nữ.
+    - Con tôi là bé trai.
+    - Con tôi là con trai.
+    - Con tôi là thằng cu.
+    - Con tôi là vịt giời.
+    - Con tôi là thiên nga.
+    - Giới tính của con là bé gái.
+    - Con tôi là nam.
+    - Con mình là bé trai.
+    - Giới tính của con là nam.
+    - Con tôi là nữ.
+    - Con mình là bé gái.
+    - Giới tính của con là nữ.
+
+- intent: user_provide_kid_height_weight
+  examples: |
+    - Chiều cao của con tôi là [1m40](kid_m_height) và cân nặng là [30 g](kid_kg_weight).
+    - Chiều cao của con tôi là [1m4](kid_m_height) và cân nặng là [30kg](kid_kg_weight).
+    - Con mình cao [120cm](kid_cm_height) và nặng [25kg](kid_kg_weight).
+    - Chiều cao của bé là [1m2](kid_m_height), cân nặng là [22 kg](kid_kg_weight).
+    - Con tôi cao [1m5](kid_m_height) và nặng [35kg](kid_kg_weight) dựa trên thông tin mới nhất.
+    - Chiều cao của con là [1m3](kid_m_height) và cân nặng là [28 kg](kid_kg_weight), mình đã kiểm tra kỹ lưỡng.
+    - Con mình cao [1m25](kid_m_height) và nặng [23 k g](kid_kg_weight) theo lần kiểm tra gần nhất.
+    - Con tôi cao [140cm](kid_cm_height) và nặng [32 k g](kid_kg_weight).
+    - Chiều cao của con là [125cm](kid_cm_height) và cân nặng là [27kg](kid_kg_weight).
+    - Con mình cao [135cm](kid_cm_height) và nặng [30 k g](kid_kg_weight).
+    - Con tôi cao [1m55](kid_m_height) và nặng [38k g](kid_kg_weight).
+    - Chiều cao của con là [1m48](kid_m_height) và cân nặng là [33kg](kid_kg_weight).
+    - Con mình cao [1m52](kid_m_height) và nặng [36kg](kid_kg_weight).
+    - Cân nặng của con tôi là [30 kg](kid_kg_weight) và chiều cao là [1m4](kid_m_height).
+    - Cân nặng của con tôi là [30kg](kid_kg_weight) và chiều cao là [1m40](kid_m_height).
+    - Cân nặng của con tôi là [30k g](kid_kg_weight) và chiều cao là [1m4](kid_m_height).
+    - Con mình nặng [25 kg](kid_kg_weight) và cao [120cm](kid_cm_height).
+    - Cân nặng của bé là [22 kg](kid_kg_weight), chiều cao là [1m20](kid_m_height).
+    - Cân nặng của bé là [22 kg](kid_kg_weight), chiều cao là [1m2](kid_m_height).
+    - Con tôi nặng [32kg](kid_kg_weight) và cao [140cm](kid_cm_height).
+    - Cân nặng của con là [27kg](kid_kg_weight) và chiều cao là [125cm](kid_cm_height).
+    - Con mình nặng [30kg](kid_kg_weight) và cao [135cm](kid_cm_height).
+    - Con tôi nặng [38kg](kid_kg_weight) và cao [1m55](kid_m_height).
+    - Cân nặng của con là [33kg](kid_kg_weight) và chiều cao là [1m48](kid_m_height).
+    - Con mình nặng [36kg](kid_kg_weight) và cao [1.52m](kid_m_height).
+    - Con tôi nặng [38kg](kid_kg_weight) và cao [1.55m](kid_m_height).
+    - Cân nặng của con là [33kg](kid_kg_weight) và chiều cao là [1.48m](kid_m_height).
+    - Con mình nặng [36kg](kid_kg_weight) và cao [1.52m](kid_m_height).
+    - Con mình nặng [36kg](kid_kg_weight) và cao [1,52m](kid_m_height).
+    - Con tôi nặng [38kg](kid_kg_weight) và cao [1,55m](kid_m_height).
+    - Cân nặng của con là [33kg](kid_kg_weight) và chiều cao là [1,48m](kid_m_height).
+    - Con mình nặng [36kg](kid_kg_weight) và cao [1,52m](kid_m_height).
+
+
+- intent: user_provide_kid_height_gender
+  examples: |
+    - Con trai của tôi cao [1m40](kid_m_height).
+    - Con trai của tôi cao [1m4](kid_m_height).
+    - Con gái của mình cao [120cm](kid_cm_height).
+    - Chiều cao của bé là [1m25](kid_m_height), và bé là nam.
+    - Con tôi cao [1m50](kid_m_height), và bé là nữ.
+    - Con tôi cao [1m5](kid_m_height), và bé là nữ.
+    - Chiều cao của bé là [1m30](kid_m_height) và bé là nam.
+    - Chiều cao của bé là [1m3](kid_m_height) và bé là nam.
+    - Con mình cao [1m48](kid_m_height) và bé là nữ.
+    - Con tôi cao [1m55](kid_m_height) và là nữ.
+    - Chiều cao của con là [1m4](kid_m_height) và là nam.
+    - Con mình cao [1m60](kid_m_height) và là nữ.
+    - Con mình cao [1m6](kid_m_height) và là nữ.
+    - Con tôi cao [140cm](kid_cm_height) và là nam.
+    - Chiều cao của bé là [130cm](kid_cm_height) và là nữ.
+    - Con mình cao [125cm](kid_cm_height) và là nam.
+    - Con trai của tôi là nam và cao [1m40](kid_m_height).
+    - Con trai của tôi là nam và cao [1m4](kid_m_height).
+    - Con gái của mình là nữ và cao [120cm](kid_cm_height).
+    - Bé là nam và chiều cao là [1m25](kid_m_height).
+    - Con tôi là nữ và cao [1m50](kid_m_height).
+    - Bé là nam và cao [1m30](kid_m_height).
+    - Con tôi là nữ và cao [1m5](kid_m_height).
+    - Bé là nam và cao [1m3](kid_m_height).
+    - Con mình là nữ và cao [1m48](kid_m_height).
+    - Con tôi là nữ và cao [1m55](kid_m_height).
+    - Bé là nam và chiều cao là [1m40](kid_m_height).
+    - Con mình là nữ và cao [1m60](kid_m_height).
+    - Con tôi là nam và cao [140cm](kid_cm_height).
+    - Bé là nữ và chiều cao là [130cm](kid_cm_height).
+    - Con mình là nam và cao [125cm](kid_cm_height).
+
+
+- intent: user_provide_kid_weight_gender
+  examples: |
+    - Con trai của tôi là nam và nặng [40kg](kid_kg_weight).
+    - Con gái của mình là nữ và cân nặng [35kg](kid_kg_weight).
+    - Bé là nam và cân nặng [28kg](kid_kg_weight).
+    - Con tôi là nữ và cân nặng [45kg](kid_kg_weight).
+    - Bé là nam và cân nặng [38kg](kid_kg_weight).
+    - Con mình là nữ và cân nặng [32kg](kid_kg_weight).
+    - Con tôi là nữ và cân nặng [52kg](kid_kg_weight).
+    - Bé là nam và cân nặng [48kg](kid_kg_weight).
+    - Con mình là nữ và cân nặng [50kg](kid_kg_weight).
+    - Con tôi là nam và cân nặng [55kg](kid_kg_weight).
+    - Bé là nữ và cân nặng [42kg](kid_kg_weight).
+    - Con mình là nam và cân nặng [58kg](kid_kg_weight).
+    - Con tôi là con trai và nặng [52kg](kid_kg_weight).
+    - Con tôi là con gái và nặng [30kg](kid_kg_weight).
+    - Con tôi là con trai và cân nặng [52kg](kid_kg_weight).
+    - Con tôi là con gái và cân nặng [30kg](kid_kg_weight).
+
+- intent: user_provide_kid_height_weight_gender
+  examples: |
+    - Con tôi là con trai, nặng [52kg](kid_kg_weight) và cao [160cm](kid_cm_height).
+    - Con tôi là con gái, nặng [30kg](kid_kg_weight) và cao [140cm](kid_cm_height).
+    - Con tôi là con trai, cân nặng [52kg](kid_kg_weight) và chiều cao [1m60](kid_m_height).
+    - Con tôi là con gái, cân nặng [30kg](kid_kg_weight) và chiều cao [140cm](kid_cm_height).
+    - Con tôi là con trai, nặng [60kg](kid_kg_weight) và cao [170cm](kid_cm_height).
+    - Con tôi là con gái, nặng [38kg](kid_kg_weight) và cao [150cm](kid_cm_height).
+    - Con tôi là con trai, cân nặng [55kg](kid_kg_weight) và chiều cao [165cm](kid_cm_height).
+    - Con tôi là con gái, cân nặng [42kg](kid_kg_weight) và chiều cao [155cm](kid_cm_height).
+    - Con tôi là con trai, nặng [52kg](kid_kg_weight) và cao [1.6m](kid_m_height).
+    - Con tôi là con gái, nặng [30kg](kid_kg_weight) và cao [1.4m](kid_m_height).
+    - Con tôi là con trai, cân nặng [52kg](kid_kg_weight) và chiều cao [1m60](kid_m_height).
+    - Con tôi là con gái, cân nặng [30kg](kid_kg_weight) và chiều cao [1.4m](kid_m_height).
+    - Con tôi là con trai, nặng [60kg](kid_kg_weight) và cao [1.7m](kid_m_height).
+    - Con tôi là con gái, nặng [38kg](kid_kg_weight) và cao [1.5m](kid_m_height).
+    - Con tôi là con trai, cân nặng [55kg](kid_kg_weight) và chiều cao 1m65.
+    - Con tôi là con gái, cân nặng [42kg](kid_kg_weight) và chiều cao [1.55m](kid_m_height).
+    - Con tôi là con trai, nặng [27kg](kid_kg_weight) và cao [100cm](kid_cm_height).
+    - Con tôi là con gái, nặng [18kg](kid_kg_weight) và cao[90cm](kid_cm_height).
+    - Con tôi là con trai, cân nặng [24kg](kid_kg_weight) và chiều cao [105cm](kid_cm_height).
+    - Con tôi là con gái, cân nặng [16kg](kid_kg_weight) và chiều cao[88cm](kid_cm_height).
+    - Con trai, cân nặng [23kg](kid_kg_weight) và cao [1.05m](kid_m_height).
+    - Con gái, cân nặng [19kg](kid_kg_weight) và cao [1m](kid_m_height).
+    - Con trai, cân nặng [18kg](kid_kg_weight) và chiều cao [1.1m](kid_m_height).
+    - Con gái, cân nặng [15kg](kid_kg_weight) và chiều cao [1.02m](kid_m_height).
+    - Con trai, nặng [25kg](kid_kg_weight) và cao [1.1m](kid_m_height).
+    - Con gái, nặng [16kg](kid_kg_weight) và cao [1m](kid_m_height).
+    - Con trai, cân nặng [22kg](kid_kg_weight) và chiều cao [1.12m](kid_m_height).
+    - Con gái, cân nặng [13kg](kid_kg_weight) và chiều cao [1.03m](kid_m_height).
+    - Con trai, cân nặng [26kg](kid_kg_weight) và cao [1.12m](kid_m_height).
+    - Con gái, cân nặng [20kg](kid_kg_weight) và cao [1.02m](kid_m_height).
+    - Con trai, cân nặng [27kg](kid_kg_weight) và chiều cao [1.2m](kid_m_height).
+    - Con gái, cân nặng [18kg](kid_kg_weight) và chiều cao [1.08m](kid_m_height).
+
+
+- intent: user_want_weight_gain
+  examples: |
+    - Giờ tôi muốn cháu tăng cân thì cần làm như nào?
+- intent: user_want_losing_weight
+  examples: |
+    - Giờ tôi muốn cháu giảm cân thì cần làm như nào?
+- intent: user_describe_kid_obesity
+  examples: |
+    - [Con](user_kid) tôi ăn không ngon miệng và hay bỏ bữa, có phải [con](user_kid) bị suy dinh dưỡng không? 
+    - Làm sao để biết [con](user_kid) tôi có đủ dinh dưỡng không? 
+    - [Con](user_kid) tôi thường xuyên mệt mỏi và không có hứng thú ăn uống, có phải do suy dinh dưỡng? 
+    - Có những dấu hiệu nào cho thấy [con](user_kid) tôi đang gặp vấn đề về dinh dưỡng? 
+    - Tôi nên cho [con](user_kid) ăn những thực phẩm gì để giúp cải thiện tình trạng suy dinh dưỡng? 
+    - [Con](user_kid) tôi hay ốm vặt và không phát triển bình thường, có thể do suy dinh dưỡng không? 
+    - Tôi lo lắng về việc [con](user_kid) không đủ canxi và chiều cao, làm thế nào để bổ sung dinh dưỡng cho [con](user_kid)  
+    - [Con](user_kid) tôi có ngại ăn nhiều loại thực phẩm, làm sao để đảm bảo [con](user_kid) đủ dinh dưỡng? 
+    - Tôi muốn biết lượng calo cần thiết mỗi ngày cho [con](user_kid)  làm thế nào để tính toán? 
+    - [Con](user_kid) tôi không có sức khỏe tốt và hay bị ốm, có thể do dinh dưỡng không đủ? 
+    - Tôi cần những gợi ý về thực đơn dinh dưỡng phù hợp cho [con](user_kid)  có thể giúp được không? 
+    - Có những loại thực phẩm nào [con](user_kid) nên tránh khi đang gặp vấn đề suy dinh dưỡng? 
+    - [Con](user_kid) tôi đang trong giai đoạn phát triển nhanh chóng, cần những chất dinh dưỡng gì? 
+    - Tôi không biết [con](user_kid) nên ăn gì để tăng cân, có thể tư vấn giúp tôi không? 
+    - Tôi muốn tìm hiểu về các bài tập và thực đơn tăng cân cho [con](user_kid)  có thể hỗ trợ được không?
+    - Bé nhà tôi bị suy dinh dưỡng.
+    - [Con](user_kid) nhà tôi bị suy dinh dưỡng

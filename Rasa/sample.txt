@@ -1,0 +1,8 @@
+Các giá trị trong các slot là:
+user_name: None
+user_kid: ['Con']
+kid_kg_weight: ['60', '45kg']
+kid_cm_height: None
+kid_m_height: ['gái']
+kid_gender: nữ
+session_started_metadata: None

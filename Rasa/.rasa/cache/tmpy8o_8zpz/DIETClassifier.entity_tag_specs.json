@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-kid_cm_height",
+      "2": "I-kid_cm_height",
+      "3": "L-kid_cm_height",
+      "4": "U-kid_cm_height",
+      "5": "B-kid_kg_weight",
+      "6": "I-kid_kg_weight",
+      "7": "L-kid_kg_weight",
+      "8": "U-kid_kg_weight",
+      "9": "B-kid_m_height",
+      "10": "I-kid_m_height",
+      "11": "L-kid_m_height",
+      "12": "U-kid_m_height",
+      "13": "B-user_kid",
+      "14": "I-user_kid",
+      "15": "L-user_kid",
+      "16": "U-user_kid",
+      "17": "B-user_name",
+      "18": "I-user_name",
+      "19": "L-user_name",
+      "20": "U-user_name",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-kid_cm_height": 1,
+      "I-kid_cm_height": 2,
+      "L-kid_cm_height": 3,
+      "U-kid_cm_height": 4,
+      "B-kid_kg_weight": 5,
+      "I-kid_kg_weight": 6,
+      "L-kid_kg_weight": 7,
+      "U-kid_kg_weight": 8,
+      "B-kid_m_height": 9,
+      "I-kid_m_height": 10,
+      "L-kid_m_height": 11,
+      "U-kid_m_height": 12,
+      "B-user_kid": 13,
+      "I-user_kid": 14,
+      "L-user_kid": 15,
+      "U-user_kid": 16,
+      "B-user_name": 17,
+      "I-user_name": 18,
+      "L-user_name": 19,
+      "U-user_name": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

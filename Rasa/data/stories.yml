@@ -1,0 +1,88 @@
+version: "3.1"
+
+stories:
+
+- story: greeting
+  steps:
+  - intent: user_greet
+  - action: utter_greet
+
+
+- story: greeting name
+  steps:
+  - intent: user_greet_name
+  - action: action_greet_name
+
+- story: User asks for the current time
+  steps:
+  - intent: user_ask_time
+  - action: action_get_time
+
+# - story: User say thanks
+#   steps:
+#   - intent: user_thank_you
+#   - action: utter_thanks
+
+- story: User say goodbye
+  steps:
+  - intent: user_farewell
+  - action: utter_farewell
+
+- story: User say deny
+  steps:
+  - intent: user_deny
+  - action: utter_deny
+
+- story: User feeling bad
+  steps:
+  - intent: user_mood_unhappy
+  - action: utter_cheer_up
+
+- story: User feeling happy
+  steps:
+  - intent: user_mood_great
+  - action: utter_happy  
+
+
+# BMI stories 
+- story: User describing obesity kid without info kid
+  steps:
+  - intent: user_describe_kid_obesity
+  - action: action_repply_kid_obesity
+- story: User describing obesity kid with height(cm)
+  steps:
+  - intent: user_provide_kid_height_cm
+  - action: action_repply_kid_obesity
+- story: User describing obesity kid with height(m)
+  steps:
+  - intent: user_provide_kid_height_m
+  - action: action_repply_kid_obesity
+- story: User describing obesity kid with weigh(kg)
+  steps:
+  - intent: user_provide_kid_weight
+  - action: action_repply_kid_obesity
+- story: User describing obesity kid with gender(male/female)
+  steps:
+  - intent: user_provide_kid_gender
+  - action: action_repply_kid_obesity
+- story: User describing obesity kid with height - weight 
+  steps:
+  - intent: user_provide_kid_height_weight
+  - action: action_repply_kid_obesity
+- story: User describing obesity kid with height - gender
+  steps:
+  - intent: user_provide_kid_height_gender
+  - action: action_repply_kid_obesity
+- story: User describing obesity kid with weight - gender
+  steps:
+  - intent: user_provide_kid_weight_gender
+  - action: action_repply_kid_obesity
+- story: User describing obesity kid with height - weight - gender
+  steps:
+  - intent: user_provide_kid_height_weight_gender
+  - action: action_repply_kid_obesity
+- story: Calculating BMI for kid
+  steps:
+  - action: action_repply_kid_obesity
+  - intent: user_confirm
+  - action: action_kid_BMI
